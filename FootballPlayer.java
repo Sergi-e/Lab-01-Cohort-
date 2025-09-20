@@ -39,11 +39,14 @@ public class FootballPlayer{
         System.out.println("The new age is" +age);
         System.out.println("The new jersey number is" +age);
         // Task 4
+        String eligibility="";
         if (age>=18 && age<=35 && casted_weight<=90){
-            System.out.println("ELIGIBLE");
+            eligibility="ELIGIBLE";
+            System.out.println(eligibility);
         }
         else{
-            System.out.println("Not eligible" +age);
+            eligibility="Not eligible";
+            System.out.println(eligibility);
         }
         if (age<18 || weight>=90){
             System.out.println("The player has a problem (Either too young or too heavy)" +age);
@@ -52,14 +55,18 @@ public class FootballPlayer{
             System.out.println("ELIGIBLE");
         }
         // Task 5
+        String category="";
         if (age<20){
-            System.out.println("Rising Star");
+            category="Rising Star";
+            System.out.println(category);
         }
         if(age>=20 || age<30 ){
-            System.out.println("Prime Player");
+            category="Prime Player";
+            System.out.println(category);
         }
         if(age>30 ){
-            System.out.println("Veteran");
+            category="Veteran";
+            System.out.println(category);
         }
         //Task 6
         System.out.println("Please, enter the jersey number");
@@ -94,26 +101,61 @@ public class FootballPlayer{
             break;
             default:
             System.out.println("Player Position Not Known");
+              }
             //Task 7
-
-
-
-
-           
-
+            //Part A (Unwanted Fall-Through):
+        switch(jersey_num){
+            case 2:
+            System.out.println("Defender");
+            case 6:
+            System.out.println("Midfielder");
+            case 7:
+            System.out.println("Winger");
+            default:
+            System.out.println("Player Position Not Known");
+             }
+            //Part B (Grouped Case – Useful Fall-Through):
+        System.out.println("Enter the player's jersey number");
+        switch(jersey_num){
+            case 1:
+            System.out.println("GoalKeeper");
+            break;
+            case 2:
+            case 5:
+            System.out.println("Defender");
+            break;
+            case 6:
+            case 8:
+            System.out.println("Midfielder");
+            break;
+            case 7:
+            case 11:
+            System.out.println("Winger");
+            break;
+            case 9:
+            System.out.println("Striker");
+            break;
+            case 10:
+            System.out.println("Playmaker");
+            break;
+            default:
+            System.out.println("Player Position Not Known");
+            //Task 8
+        if (category.equals("Prime Player")){
+            if (casted_weight<80){
+                System.out.println("Starting lineup");
+            }
+            else{
+                System.out.println("Bench");
+            }
         }
+        //Task 9
+        String final_status=(category.equals("ELIGIBLE"))
+                           ? "Play"
+                           : "Rest";
+        System.out.println(final_status);
 
 
-
-
-
-
-
-
-
-
-
-
-
-    }
+     }
+ }
 }
