@@ -16,7 +16,7 @@ public class PlayerSelection {
         System.out.print("Enter the player's Jersey number: ");
         jersey_number = scan.nextInt();
 
-        System.out.print("Enter the player's Height (in cm): ");
+        System.out.print("Enter the player's Height (in meters): ");
         height = scan.nextDouble();
 
         System.out.print("Enter the player's weight (in pounds): ");
@@ -26,7 +26,7 @@ public class PlayerSelection {
         double pound = 0.45359237;
         int meter = 100;
         double weigh_kilos = weight / pound;
-        double heigh_cents = height / meter;
+        double heigh_cents = height * meter;
         int casted_weight = (int) weigh_kilos;
 
         //Task 3: Incrementing and Decrementing
@@ -51,7 +51,7 @@ public class PlayerSelection {
             category = "Veteran";
         }
 
-        //Task 6 & 7: Using the switch for position
+        //Task 6 & 7: Using the switch for Players' positions
         String position = "";
         switch (jersey_number) {
             case 1:
@@ -109,7 +109,7 @@ public class PlayerSelection {
         System.out.println("Lineup Decision: " + lineup_decision);
         System.out.println("Final Decision: " + final_status);
 
-        //Task 10.  7.  Unwanted Fall-through Demo 
+        //Task 10. Unwanted Fall-through Demo Part
         System.out.println("Unwanted Fall-Through Demo");
         switch (jersey_number) {
             case 2:
