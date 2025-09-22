@@ -79,7 +79,7 @@ public class FootballPlayer{
             System.out.println(category);
         }
         
-        //Task 6
+        //Task 6 position using the jersey Number
         System.out.println("Please, enter the jersey number");
         int jersey_num=scan.nextInt();
         switch(jersey_num){
